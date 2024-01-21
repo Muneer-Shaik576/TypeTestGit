@@ -4,32 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container main" id="containerE1">
         <div class="d-none text-center margin" id="spinner">
             <div class="spinner-border" role="status">
             </div>
         </div>
-        <div class="type-container">
+        <div class="container type-container" id="speedTypingTest">
             <h1 class="heading">Typing Speed Test</h1>
-            <div class="sub-heading">
+            <div class="sub-heading d-flex justify-content-between">
                 <p>I Can Type This Faster Than You Read</p>
-                <div>
-                    <div><img src="./Images/hourglass_3073440.png"> </div>
-                    <p id="timer"></p>
-                    <span>Seconds</span>
+                <div class="d-flex flex-row">
+                    <div class="mb-4 mr-4"><img src="./Images/hourglass_3073440.png"> </div>
+                    <p id="timer"class="timer mb-4 mr-1 mt-4"> </p>
+                    <span class="mb-4 mt-4">  Seconds </span>
                 </div>
             </div>
-            <div class="display-content" >
-                <p id="d-content"></p>
-                <textarea id="input-text" class="inputcontent" type="text" placeholder="Type Here!" ></textarea>
+            <div class="display-content mb-4" >
+                <p id="quoteDisplay" class="paragraph"></p>
+                <textarea id="quoteInput" class="inputcontent form-control" rows="6"  type="text" placeholder="Type Here!" ></textarea>
             </div>
-            <p id="result"></p>
-            <button id="submitbt" class="btnsub">Submit</button>
-            <button id="resetbtn" class="btnreset">Reset</button>            
+            <p id="result" class="result"></p>
+            <button id="submitBtn" class="btnsub">Submit</button>
+            <button id="resetBtn" class="btnreset">Reset</button>            
 
         </div>
     </div>
+    <script src="index.js"></script>
+    </script>
 </body>
 </html>
